@@ -33,7 +33,7 @@ class Estoque:
 
  
     def mostrar_estoque(self):
-        print("\n📦 Estoque atual:")
+        print("\n Estoque atual:")
         for k, v in self._itens.items():
             print(f" - {k.capitalize()}: {v} unidades")
 
@@ -41,5 +41,6 @@ class Estoque:
 class PainelEstoque:
     def atualizar(self, bebida):
         print(f"⚠️  Alerta: {bebida.upper()} está esgotado no estoque!")
+
 
 
