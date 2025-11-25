@@ -28,28 +28,29 @@ class MaquinaDeRefrigerante:
         bebida = self.factory.criar_bebida(self.tipo_bebida)
         preco = bebida.preco()
 
-        # 1) Verifica se o valor é insuficiente
+        
         if self.valor_pago < preco:
             print(f"❌ Valor insuficiente! A {self.tipo_bebida} custa R${preco:.2f}")
             return
 
-        # 2) Verifica estoque antes de seguir
+        
         if self.estoque.verificar(self.tipo_bebida) == 0:
             print(f"❌ {self.tipo_bebida} está fora de estoque.")
             return
 
-        # 3) Calcula troco, se houver
+       
         if self.valor_pago > preco:
             troco = self.valor_pago - preco
             print(f"💸 Pagamento aceito. Seu troco é de R${troco:.2f}.")
         else:
             print("✅ Pagamento no valor exato aceito.")
 
-        # 4) Prepara e entrega a bebida
+        
         bebida.preparar()
         self.estoque.reduzir_estoque(self.tipo_bebida)
         print("✅ Produto entregue! Aproveite sua bebida! 🍹")
 
-        # (Opcional) zera o valor pago para a próxima operação
+        # zera o valor pago para a próxima operação
         self.valor_pago = 0
         self.tipo_bebida = None
+
