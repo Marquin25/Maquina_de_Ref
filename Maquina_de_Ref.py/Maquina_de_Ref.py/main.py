@@ -2,12 +2,12 @@ from maquina import MaquinaDeRefrigerante
 from pagamentos import PagamentoMoeda, PagamentoPix, PagamentoCartao
 
 def escolher_pagamento():
-    print("\n💳 Escolha o método de pagamento:")
+    print("\n Escolha o método de pagamento:")
     print("1. Moedas")
     print("2. PIX")
     print("3. Cartão")
 
-    opcao = input("➡️  Opção: ").strip()
+    opcao = input("  Opção: ").strip()
     if opcao == "1":
         return PagamentoMoeda()
     elif opcao == "2":
@@ -22,7 +22,7 @@ def main():
     maquina = MaquinaDeRefrigerante()
 
     while True:
-        print("\n=== 🥤 MÁQUINA DE REFRIGERANTE ===")
+        print("\n===  MÁQUINA DE REFRIGERANTE ===")
         maquina.estoque.mostrar_estoque()
         print("\nEscolha sua bebida:")
         print("1. Coca-Cola (R$5.00)")
@@ -32,7 +32,7 @@ def main():
 
         escolha = input("➡️  Opção: ").strip()
         if escolha == "0":
-            print("\n👋 Encerrando o programa. Até mais!")
+            print("\n Encerrando o programa. Até mais!")
             break
 
         bebidas_opcoes = {"1": "coca", "2": "guarana", "3": "fanta"}
@@ -45,7 +45,7 @@ def main():
         pagamento = escolher_pagamento()
 
         try:
-            valor = float(input("💵 Insira o valor pago: R$").replace(",", "."))
+            valor = float(input(" Insira o valor pago: R$").replace(",", "."))
         except ValueError:
             print("❌ Valor inválido. Tente novamente.")
             continue
@@ -57,3 +57,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
