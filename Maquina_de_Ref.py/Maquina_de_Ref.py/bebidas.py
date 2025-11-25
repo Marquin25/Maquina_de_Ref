@@ -15,7 +15,7 @@ class Bebida(ABC):
 # Produtos Concretos
 class CocaCola(Bebida):
     def preparar(self):
-        print("🍶 Preparando uma Coca-Cola gelada...")
+        print("Preparando uma Coca-Cola gelada...")
 
     def preco(self):
         return 5.00
@@ -23,7 +23,7 @@ class CocaCola(Bebida):
 
 class Guarana(Bebida):
     def preparar(self):
-        print("🥤 Preparando um Guaraná refrescante...")
+        print("Preparando um Guaraná refrescante...")
 
     def preco(self):
         return 4.50
@@ -31,7 +31,7 @@ class Guarana(Bebida):
 
 class Fanta(Bebida):
     def preparar(self):
-        print("🧃 Preparando uma Fanta sabor laranja...")
+        print(" Preparando uma Fanta sabor laranja...")
 
     def preco(self):
         return 4.00
@@ -49,3 +49,4 @@ class BebidaFactory:
             return Fanta()
         else:
             raise ValueError("Tipo de bebida desconhecido!")
+
