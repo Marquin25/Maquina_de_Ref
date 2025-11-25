@@ -41,7 +41,7 @@ class MaquinaDeRefrigerante:
        
         if self.valor_pago > preco:
             troco = self.valor_pago - preco
-            print(f"💸 Pagamento aceito. Seu troco é de R${troco:.2f}.")
+            print(f" Pagamento aceito. Seu troco é de R${troco:.2f}.")
         else:
             print("✅ Pagamento no valor exato aceito.")
 
@@ -53,4 +53,5 @@ class MaquinaDeRefrigerante:
         # zera o valor pago para a próxima operação
         self.valor_pago = 0
         self.tipo_bebida = None
+
 
