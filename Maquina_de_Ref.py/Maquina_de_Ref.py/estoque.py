@@ -37,8 +37,9 @@ class Estoque:
         for k, v in self._itens.items():
             print(f" - {k.capitalize()}: {v} unidades")
 
-# Observador
+
 class PainelEstoque:
     def atualizar(self, bebida):
         print(f"⚠️  Alerta: {bebida.upper()} está esgotado no estoque!")
+
 
